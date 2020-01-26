@@ -6,7 +6,7 @@
             <?php if(!Yii::$app->user->isGuest):?>
                 <?php
                     $storageUrl = isset(Yii::$app->params['storageUrl'])?Yii::$app->params['storageUrl']:'';
-                    $login = "{$storageUrl}/images/logo2.png";
+                    $login = "{$storageUrl}/images/logo.png";
                 ?>
                 <div class="user-panel">
                     <div class="pull-left image">
