@@ -41,3 +41,9 @@
 </script>
 <?php \richardfan\widget\JSRegister::end(); ?>
 <?php endif; ?>
+
+<?php \appxq\sdii\widgets\CSSRegister::begin()?>
+<style>
+     <?= isset(Yii::$app->params['dashboard_css'])?Yii::$app->params['dashboard_css']:''?>
+</style>
+<?php \appxq\sdii\widgets\CSSRegister::end()?>
