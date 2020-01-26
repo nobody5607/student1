@@ -16,32 +16,6 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['login', 'error','index','about','contact'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index','about','contact','edit'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
 
 
 
@@ -65,6 +39,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        if(Yii::$app->user->isGuest){
+            return $this->redirect(['/user/login']);
+        }
          return $this->render('index');
  
     }

@@ -25,7 +25,10 @@ $form = ActiveForm::begin([
     //'enableClientValidation' => false,
 ]);
 ?>
-<div class="row">
+<div class="row" style="margin-top:50px">
+
+    <h3 class="text-center"><?= isset(Yii::$app->params['initial_name_app'])?Yii::$app->params['initial_name_app']:''?></h3>
+
     <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -74,4 +77,3 @@ $form = ActiveForm::begin([
     </div>
 </div>
 <?php ActiveForm::end(); ?>
- 

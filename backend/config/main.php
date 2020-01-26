@@ -123,7 +123,7 @@ return [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
             //module, controller, action ที่อนุญาตให้ทำงานโดยไม่ต้องผ่านการตรวจสอบสิทธิ์
-            'site/*',
+//            'site/*',
             'user/registration/register',
             'user/recovery/request',
             'user/recovery/reset',
